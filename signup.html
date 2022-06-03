@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+        #container{
+            width: 30%;
+            height: 500px;
+            display: grid;
+            flex-direction: column;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(6, auto);
+            /* gap: 10px; */
+            margin: auto;
+            background-color: #48c9b0;
+            text-align: center;
+            align-items: center;
+        }
+        
+        #container>div:first-child{
+            margin-top: 20px;
+            color: white;
+            font-size: 20px;
+        }
+        #name{
+            height: 40px;
+            border: 0px;
+            width: 70%;
+        }
+        #email{
+            height: 40px;
+            border: 0px;
+            width: 70%;
+        }
+        #org{
+            height: 40px;
+            border: 0px;
+            width: 70%;
+        }
+        button{
+            height: 40px;
+            border: 0px;
+            background-color: #17a589;
+            color: white;
+            width: 70%;
+        }
+        div+div{
+            margin-top: -40px;
+        }
+        div+div+div{
+            margin-top: -70px;
+        }
+        div+div+div+div{
+            margin-top: -100px;
+        }
+        div+div+div+div+div{
+            margin-top: -140px;
+        }
+        div+div+div+div+div+div{
+            margin-top: -200px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>- Visitor -</div>
+        <div>
+            <input type="text" name="" id="name" placeholder="  Full name"/>
+        </div>
+        <div>
+            <input type="email" name="" id="email" placeholder="  Email"/>
+        </div>
+        <div>
+            <input type="text" name="" id="org" placeholder="  Organization"/>
+        </div>
+        <div>
+            <button>SIGN UP</button>
+        </div>
+        <div>
+            <button>RETURN</button>
+        </div>
+    </div>
+</body>
+</html>
