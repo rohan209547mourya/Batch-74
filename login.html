@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-in</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        body {
+            background: rgb(79, 127, 205);
+            background: linear-gradient(103deg, rgba(79, 127, 205, 1) 0%, rgba(99, 107, 194, 1) 51%, rgba(118, 91, 185, 1) 100%);
+        }
+        *{
+            font-family: 'Poppins', sans-serif;
+        }
+        #container{
+            width: 30%;
+            margin: auto;
+            margin-top: 100px;
+            height: 500px;
+            background-color: white;
+            border-radius: 20px;
+            text-align: center;
+        }
+        h1{
+            padding-top: 70px;
+            font-weight: 700;
+        }
+        input{
+            margin-bottom:30px;
+            padding: 10px;
+            width: 60%;
+        }
+        #email{
+            font-size: 20px;
+            border: none;
+            border-bottom: 2px solid rgb(165, 163, 163);
+        }
+        
+        #password:nth-child(3){
+            font-size: 20px;
+            border: none;
+            border-bottom: 2px solid rgb(165, 163, 163);
+        }
+        .glow:focus, textarea:focus {
+            outline: none;
+            box-shadow: 0 0 9px rgba(81, 203, 238, 1);
+            padding: 10px;
+            border: 1px solid rgba(81, 203, 238, 1);
+            border-radius: 5px;
+        }
+        #submit{
+            background: rgb(79, 127, 205);
+            background: linear-gradient(103deg, rgba(79, 127, 205, 1) 0%, rgba(99, 107, 194, 1) 51%, rgba(118, 91, 185, 1) 100%);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+        }
+        p{
+            color: rgb(151, 151, 151);
+        }
+        a{
+            color: rgb(0, 108, 197);
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div>
+            <h1>Login</h1>
+        </div>
+        <div>
+            <form id="login_form">
+                <input type="email" placeholder="Email" class="glow" id="email"><br>
+                <input type="password" placeholder="Password" id="password" class="glow"><br>
+                <input type="submit" value="Login" id="submit">
+            </form>
+        </div>
+        <div>
+            <p>Forgot <a href="#">Password?</a></p>
+            <p>Don't have an account?<a href="#">Sign up</a></p>
+        </div>
+        
+    </div>
+</body>
+
+</html>
+
+<script>
+    document.getElementById("login_form").addEventListener("submit" , main);
+    function main (){
+        event.preventDefault();
+        let userEmail = document.getElementById("email").value;
+        let userPassword = document.getElementById("password").value;
+
+        let userData = [
+            {uEmail: userEmail , uPass:userPassword}
+        ]
+        console.log(userData);
+    }
+</script>
